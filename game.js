@@ -1,4 +1,5 @@
 $("h2").hide()
+$(".la").show()
 var buttonColours = ["red", "blue", "green", "yellow"]
 var gamePattern = []
 var userClickedPattern = []
@@ -6,6 +7,7 @@ var started = false
 var level = 0
 $(document).keypress(function() {//1 by pressing a key it start by giving a random color
   if (!started) {//the color generates by using the Math.random function
+    $(".la").hide()
     $("#level-title").text("Level " + level)
     nextSequence()
     started = true
